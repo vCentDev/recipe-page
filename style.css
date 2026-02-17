@@ -33,6 +33,11 @@
     --space-200: 16px;
     --space-150: 12px;
     --space-100: 8px;
+
+    /* Border Radius */
+    --radius-lg: 24px;
+    --radius-md: 12px;
+    --radius-sm: 6px;
 }
 
 /* ==========================================================================
@@ -90,7 +95,7 @@ hr {
 
 /* Text Presets */
 .text-preset1 {
-    font-family: YoungSerif;
+    font-family: var(--font-family-secondary);
     font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
     font-weight: normal;
     line-height: 1;
@@ -98,7 +103,7 @@ hr {
     color: var(--color-stone-900);
 }
 .text-preset2 {
-    font-family: YoungSerif;
+    font-family: var(--font-family-secondary);
     font-size: clamp(1.25rem, 2vw + 0.5rem, 1.75rem);
     font-weight: normal;
     line-height: 1;
@@ -106,20 +111,20 @@ hr {
     color: var(--color-brown-800);
 }
 .text-preset3 {
-    font-family: Outfit;
-    font-size: 20px;
+    font-family: var(--font-family-base);
+    font-size: 1.25rem;
     font-weight: var(--font-weight-semibold);
     line-height: 1;
     letter-spacing: normal;
     color: var(--color-rose-800);
 }
 .text-preset4 {
-    font-family: Outfit;
+    font-family: var(--font-family-base);
     line-height: 1.5;
     letter-spacing: normal;
 }
 .text-preset4-bold {
-    font-family: YoungSerif;
+    font-family: var(--font-family-secondary);
     font-weight: var(--font-weight-bold);
     line-height: 1.5;
     letter-spacing: normal;
@@ -143,7 +148,7 @@ hr {
 
     /* Visual */
     background-color: var(--color-white);
-    border-radius: var(--space-300);
+    border-radius: var(--radius-lg);
 }
 
 
@@ -153,7 +158,7 @@ hr {
     display: block;
     width: 100%;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: var(--radius-md);
 }
 
 /* Content
@@ -180,7 +185,7 @@ hr {
     gap: var(--space-200);
     padding: var(--space-300);
     background-color: var(--color-rose-50);
-    border-radius: var(--space-150);
+    border-radius: var(--radius-md);
 }
 
 .preparation ul {
@@ -269,8 +274,8 @@ hr {
     font-weight: bold;
 }
 
-@media (max-width: 370px) {
-    .body {
+@media (max-width: 23.125em) {
+    body {
         padding: 0;
     }
     .card {
